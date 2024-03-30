@@ -1,10 +1,12 @@
 package com.ashutosh.bingo.domain.models
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.room.PrimaryKey
 import java.time.LocalDate
 import java.time.LocalTime
 
-data class Task(
+data class Task @RequiresApi(Build.VERSION_CODES.O) constructor(
     @PrimaryKey(autoGenerate = true) val id: Int = 0 ,
     val uuid: String ,
     val title: String = "" ,
