@@ -112,4 +112,25 @@ dependencies {
 
     //calender
     implementation("com.kizitonwose.calendar:compose:2.4.1")
+
+
+    //Mobile UI Controller Background
+    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.20.0")
+
+    //Bottom sheet dialog compose
+    implementation ("com.holix.android:bottomsheetdialog-compose:1.4.0")
+
+    //Retrofit and LifeCycle Livedata Support for the ViewModels
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.google.code.gson:gson:2.9.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel:2.3.1")
+    implementation ("androidx.lifecycle:lifecycle-livedata:2.3.1")
+
+    //okhttp Network logging interceptor
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    //Navigation
+    implementation ("androidx.navigation:navigation-compose:2.6.0")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
 }
