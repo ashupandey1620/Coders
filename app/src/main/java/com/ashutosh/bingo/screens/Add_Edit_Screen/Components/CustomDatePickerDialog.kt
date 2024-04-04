@@ -29,13 +29,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color.Companion.Blue
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.ashutosh.bingo.Components.h2TextStyle
 import com.ashutosh.bingo.Components.h3TextStyle
 import com.ashutosh.bingo.Components.taskTextStyle
+import com.ashutosh.bingo.screens.Calendar.Components.DaysOfWeekTitle
+import com.ashutosh.bingo.screens.Calendar.Components.MonthDayComponent
 import com.ashutosh.bingo.ui.theme.BingoTheme
 import com.kizitonwose.calendar.compose.HorizontalCalendar
 import com.kizitonwose.calendar.compose.rememberCalendarState

@@ -12,6 +12,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.Blue
@@ -23,11 +24,6 @@ import com.ashutosh.bingo.Components.durationTextStyle
 import com.ashutosh.bingo.Components.h3TextStyle
 import com.ashutosh.bingo.ui.theme.BingoTheme
 import com.commandiron.wheel_picker_compose.WheelTimePicker
-import com.vishal2376.snaptick.R
-import com.vishal2376.snaptick.presentation.common.durationTextStyle
-import com.vishal2376.snaptick.presentation.common.h3TextStyle
-import com.vishal2376.snaptick.ui.theme.Blue
-import com.vishal2376.snaptick.ui.theme.SnaptickTheme
 import java.time.LocalTime
 
 @Composable
