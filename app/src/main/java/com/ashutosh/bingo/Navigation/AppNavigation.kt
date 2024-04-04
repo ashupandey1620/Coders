@@ -9,3 +9,16 @@ fun AppNavigation(taskViewModel: TaskViewModel) {
 
 
 }
+
+
+enum class Routes {
+    HomeScreen,
+    AddTaskScreen,
+    EditTaskScreen,
+    CompletedTaskScreen,
+    PomodoroScreen,
+    FreeTimeScreen,
+    ThisWeekTaskScreen,
+    CalenderScreen,
+    SettingsScreen,
+}
