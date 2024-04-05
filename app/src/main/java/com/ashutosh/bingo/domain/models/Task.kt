@@ -2,12 +2,21 @@ package com.ashutosh.bingo.domain.models
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
+import com.ashutosh.bingo.domain.convertors.LocalDateConverter
+import com.ashutosh.bingo.domain.convertors.LocalTimeConverter
 import com.ashutosh.bingo.util.Constants
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
+@Entity(tableName = "task_table")
+@TypeConverters(
+    LocalTimeConverter::class,
+    LocalDateConverter::class
+)
 data class Task @RequiresApi(Build.VERSION_CODES.O) constructor(
     @PrimaryKey(autoGenerate = true) val id: Int = 0 ,
     val uuid: String ,
