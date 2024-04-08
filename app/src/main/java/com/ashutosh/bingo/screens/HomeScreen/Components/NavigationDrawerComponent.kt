@@ -52,7 +52,7 @@ fun NavigationDrawerComponent(
 		verticalArrangement = Arrangement.spacedBy(16.dp),
 		modifier = Modifier
 			.fillMaxHeight()
-			.fillMaxWidth(0.8f)
+			.fillMaxWidth(0.7f)
 			.padding(vertical = 64.dp)
 	) {
 

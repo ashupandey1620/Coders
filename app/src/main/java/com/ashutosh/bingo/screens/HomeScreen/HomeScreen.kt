@@ -121,13 +121,13 @@ fun HomeScreen(
 		launch {
 			leftTranslate.animateTo(
 				0f,
-				tween(1000)
+				tween(500)
 			)
 		}
 		launch {
 			rightTranslate.animateTo(
 				0f,
-				tween(1000)
+				tween(500)
 			)
 		}
 	}
