@@ -7,7 +7,7 @@ import androidx.compose.material.icons.filled.Chat
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.ashutosh.bingo.ViewModel.AppTheme
+import com.ashutosh.bingo.CommonScreens.AppTheme
 import com.ashutosh.bingo.ViewModel.SortTask
 
 

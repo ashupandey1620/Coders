@@ -55,14 +55,13 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ashutosh.bingo.CommonScreens.AppTheme
 import com.ashutosh.bingo.CommonScreens.Priority
 import com.ashutosh.bingo.CommonScreens.ShowTimePicker
 import com.ashutosh.bingo.Components.SnackbarController.showCustomSnackbar
 import com.ashutosh.bingo.Components.h1TextStyle
 import com.ashutosh.bingo.Components.h2TextStyle
 import com.ashutosh.bingo.Components.taskTextStyle
-import com.ashutosh.bingo.R
-import com.ashutosh.bingo.ViewModel.AppTheme
 import com.ashutosh.bingo.ViewModel.MainState
 import com.ashutosh.bingo.domain.models.Task
 import com.ashutosh.bingo.screens.Add_Edit_Screen.Components.ConfirmDeleteDialog

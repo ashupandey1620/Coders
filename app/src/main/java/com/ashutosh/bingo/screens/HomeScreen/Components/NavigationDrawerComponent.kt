@@ -23,11 +23,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ashutosh.bingo.CommonScreens.AppTheme
 import com.ashutosh.bingo.Components.fontRobotoMono
 import com.ashutosh.bingo.Components.h2TextStyle
 import com.ashutosh.bingo.Components.h3TextStyle
@@ -35,7 +35,6 @@ import com.ashutosh.bingo.Components.taskTextStyle
 import com.ashutosh.bingo.Main.MainEvent
 import com.ashutosh.bingo.Main.NavDrawerItem
 import com.ashutosh.bingo.R
-import com.ashutosh.bingo.ViewModel.AppTheme
 import com.ashutosh.bingo.ViewModel.MainState
 
 

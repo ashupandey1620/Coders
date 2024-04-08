@@ -98,7 +98,7 @@ private val LightColorScheme = lightColorScheme(
 
 
 @Composable
-fun SnaptickTheme(
+fun BingoTheme(
     theme: AppTheme = AppTheme.Dark ,
     dynamicColor: Boolean = false ,
     content: @Composable () -> Unit

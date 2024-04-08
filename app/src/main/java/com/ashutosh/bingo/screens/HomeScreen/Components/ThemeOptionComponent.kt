@@ -22,13 +22,14 @@ import androidx.compose.ui.graphics.Color.Companion.Blue
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.ashutosh.bingo.ViewModel.AppTheme
+import com.ashutosh.bingo.CommonScreens.AppTheme
+
 import com.ashutosh.bingo.ui.theme.BingoTheme
 
 
 @Composable
 fun ThemeOptionComponent(
-	defaultTheme: AppTheme,
+	defaultTheme: AppTheme ,
 	onSelect: (AppTheme) -> Unit
 ) {
 	var selectedOption by remember { mutableStateOf(defaultTheme) }
