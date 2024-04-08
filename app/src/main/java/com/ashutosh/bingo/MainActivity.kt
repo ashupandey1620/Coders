@@ -16,7 +16,9 @@ import com.ashutosh.bingo.Components.CustomSnackBar
 import com.ashutosh.bingo.Navigation.AppNavigation
 import com.ashutosh.bingo.ViewModel.TaskViewModel
 import com.ashutosh.bingo.ui.theme.BingoTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private val taskViewModel by viewModels<TaskViewModel>()

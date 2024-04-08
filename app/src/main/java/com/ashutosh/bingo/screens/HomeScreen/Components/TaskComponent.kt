@@ -43,6 +43,7 @@ import com.ashutosh.bingo.Components.taskDescTextStyle
 import com.ashutosh.bingo.Components.taskTextStyle
 import com.ashutosh.bingo.R
 import com.ashutosh.bingo.domain.models.Task
+import com.ashutosh.bingo.ui.theme.priorityColors
 import com.ashutosh.bingo.util.DummyTasks
 import java.time.LocalDate
 

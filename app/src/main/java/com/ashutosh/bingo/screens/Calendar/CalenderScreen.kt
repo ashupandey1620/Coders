@@ -40,6 +40,9 @@ import com.ashutosh.bingo.domain.models.Task
 import com.ashutosh.bingo.screens.Calendar.Components.DaysOfWeekTitle
 import com.ashutosh.bingo.screens.Calendar.Components.MonthDayComponent
 import com.ashutosh.bingo.screens.Calendar.Components.WeekDayComponent
+import com.ashutosh.bingo.screens.HomeScreen.Components.EmptyTaskComponent
+import com.ashutosh.bingo.screens.HomeScreen.Components.TaskComponent
+import com.ashutosh.bingo.screens.HomeScreen.HomeScreenEvent
 import com.ashutosh.bingo.ui.theme.BingoTheme
 import com.ashutosh.bingo.util.Constants
 import com.ashutosh.bingo.util.DummyTasks

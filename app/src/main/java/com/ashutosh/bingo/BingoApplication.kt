@@ -6,9 +6,11 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
 import com.ashutosh.bingo.worker.RepeatTaskWorker
+import dagger.hilt.android.HiltAndroidApp
 import java.time.LocalTime
 import java.util.concurrent.TimeUnit
 
+@HiltAndroidApp
 class BingoApplication : Application() {
 
     override fun onCreate() {

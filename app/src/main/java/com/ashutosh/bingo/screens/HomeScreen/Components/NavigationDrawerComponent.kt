@@ -33,6 +33,7 @@ import com.ashutosh.bingo.Components.h2TextStyle
 import com.ashutosh.bingo.Components.h3TextStyle
 import com.ashutosh.bingo.Components.taskTextStyle
 import com.ashutosh.bingo.Main.MainEvent
+import com.ashutosh.bingo.Main.NavDrawerItem
 import com.ashutosh.bingo.R
 import com.ashutosh.bingo.ViewModel.AppTheme
 import com.ashutosh.bingo.ViewModel.MainState
@@ -105,7 +106,7 @@ fun NavigationDrawerComponent(
 			) { onClickThisWeek() }
 
 			NavDrawerItem.entries.forEach {
-				NavDrawerItemUI(icon = it.icon, label = stringResource(id = it.stringId)) {
+				NavDrawerItemUI(icon = it.icon, label = it.stringId) {
 					onMainEvent(MainEvent.OnClickNavDrawerItem(context, it))
 				}
 			}

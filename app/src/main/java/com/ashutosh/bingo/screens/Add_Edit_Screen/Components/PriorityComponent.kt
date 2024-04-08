@@ -30,7 +30,8 @@ import androidx.compose.ui.unit.dp
 import com.ashutosh.bingo.CommonScreens.Priority
 import com.ashutosh.bingo.Components.h3TextStyle
 import com.ashutosh.bingo.ui.theme.BingoTheme
-import com.vishal2376.snaptick.ui.theme.priorityColors
+import com.ashutosh.bingo.ui.theme.priorityColors
+
 
 @Composable
 fun PriorityComponent(
