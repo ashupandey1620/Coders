@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
 
         super.onCreate(savedInstanceState)
         setContent {
-            BingoTheme() {
+            BingoTheme(theme = taskViewModel.appState.theme) {
                 AppNavigation(taskViewModel = taskViewModel)
                 CustomSnackBar()
             }

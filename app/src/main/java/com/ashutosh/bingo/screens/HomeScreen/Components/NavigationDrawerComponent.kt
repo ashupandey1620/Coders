@@ -13,6 +13,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CalendarMonth
+import androidx.compose.material.icons.filled.CalendarViewWeek
+import androidx.compose.material.icons.filled.Code
+import androidx.compose.material.icons.filled.Coffee
+import androidx.compose.material.icons.filled.Deck
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -88,7 +93,7 @@ fun NavigationDrawerComponent(
 				style = h3TextStyle,
 				color = MaterialTheme.colorScheme.onPrimary
 			)
-			if (appState.streak != -1)
+//			if (appState.streak != -1)
 				ThemeOptionComponent(defaultTheme = appState.theme) {
 					onMainEvent(MainEvent.UpdateAppTheme(it, context))
 				}
@@ -100,15 +105,41 @@ fun NavigationDrawerComponent(
 
 		Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
 			NavDrawerItemUI(
-				icon = Icons.Default.CalendarMonth,
+				icon = Icons.Default.Person,
+				label = "Your Profile"
+			) {}
+
+			NavDrawerItemUI(
+				icon = Icons.Default.CalendarViewWeek,
 				label = "This Week"
 			) { onClickThisWeek() }
 
-			NavDrawerItem.entries.forEach {
-				NavDrawerItemUI(icon = it.icon, label = it.stringId) {
-					onMainEvent(MainEvent.OnClickNavDrawerItem(context, it))
-				}
-			}
+			NavDrawerItemUI(
+				icon = Icons.Default.CalendarMonth,
+				label = "This Month"
+			) {}
+
+			NavDrawerItemUI(
+				icon = Icons.Default.Code,
+				label = "CP"
+			) {}
+
+			NavDrawerItemUI(
+				icon = Icons.Default.Coffee,
+				label = "Developers"
+			) {}
+
+			NavDrawerItemUI(
+				icon = Icons.Default.Deck,
+				label = "App Info"
+			) {}
+
+
+//			NavDrawerItem.entries.forEach {
+//				NavDrawerItemUI(icon = it.icon, label = it.stringId) {
+//					onMainEvent(MainEvent.OnClickNavDrawerItem(context, it))
+//				}
+//			}
 		}
 
 	}
