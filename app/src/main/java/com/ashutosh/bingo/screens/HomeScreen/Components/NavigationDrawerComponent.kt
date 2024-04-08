@@ -1,5 +1,6 @@
 package com.ashutosh.bingo.screens.HomeScreen.Components
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -11,6 +12,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.CalendarViewWeek
@@ -18,6 +23,7 @@ import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.Coffee
 import androidx.compose.material.icons.filled.Deck
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material3.Card
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -38,9 +44,9 @@ import com.ashutosh.bingo.Components.h2TextStyle
 import com.ashutosh.bingo.Components.h3TextStyle
 import com.ashutosh.bingo.Components.taskTextStyle
 import com.ashutosh.bingo.Main.MainEvent
-import com.ashutosh.bingo.Main.NavDrawerItem
 import com.ashutosh.bingo.R
 import com.ashutosh.bingo.ViewModel.MainState
+import com.ashutosh.bingo.ui.theme.Pink80
 
 
 @Composable
@@ -54,23 +60,30 @@ fun NavigationDrawerComponent(
 
 	Column(
 		horizontalAlignment = Alignment.CenterHorizontally,
-		verticalArrangement = Arrangement.spacedBy(16.dp),
+		verticalArrangement = Arrangement.spacedBy(8.dp),
 		modifier = Modifier
 			.fillMaxHeight()
 			.fillMaxWidth(0.7f)
-			.padding(vertical = 64.dp)
 	) {
 
-		Spacer(modifier = Modifier.height(50.dp))
+		Spacer(modifier = Modifier.height(25.dp))
 		Column(
 			horizontalAlignment = Alignment.CenterHorizontally
 		) {
-			Image(
-				painter = painterResource(if (appState.theme == AppTheme.Amoled) R.drawable.app_logo_amoled else R.drawable.app_logo),
-				contentDescription = null,
-				modifier = Modifier.size(64.dp),
-			)
-			Spacer(modifier = Modifier.height(16.dp))
+
+			Card(modifier = Modifier.wrapContentSize(),
+				shape = RoundedCornerShape(15.dp),
+				border = BorderStroke(2.dp, Pink80)
+			){
+				Image(
+					painter = painterResource(if (appState.theme == AppTheme.Amoled) R.drawable.logobingo else R.drawable.logobingo) ,
+					contentDescription = null ,
+					modifier = Modifier
+						.width(150.dp)
+						.wrapContentHeight() ,
+				)
+			}
+
 			Text(
 				text = "Bingo",
 				style = h2TextStyle,
@@ -84,6 +97,9 @@ fun NavigationDrawerComponent(
 				color = MaterialTheme.colorScheme.onPrimary
 			)
 		}
+
+		Divider(thickness = 2.dp, color = MaterialTheme.colorScheme.secondary)
+
 		Row(
 			verticalAlignment = Alignment.CenterVertically,
 			horizontalArrangement = Arrangement.spacedBy(16.dp)
@@ -152,7 +168,7 @@ fun NavDrawerItemUI(icon: ImageVector, label: String, onClick: () -> Unit) {
 		modifier = Modifier
 			.fillMaxWidth()
 			.clickable { onClick() }
-			.padding(32.dp, 8.dp),
+			.padding(32.dp , 8.dp),
 		horizontalArrangement = Arrangement.spacedBy(10.dp),
 		verticalAlignment = Alignment.CenterVertically
 	) {

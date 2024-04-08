@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import com.ashutosh.bingo.CommonScreens.AppTheme
 
 import com.ashutosh.bingo.ui.theme.BingoTheme
+import com.ashutosh.bingo.ui.theme.Pink40
 
 
 @Composable
@@ -65,7 +66,7 @@ fun ThemeOptionItem(
 	Box(
 		modifier = Modifier
 			.size(32.dp)
-			.border(1.dp, if (isSelected) Blue else Color.Transparent, CircleShape),
+			.border(1.dp, if (isSelected) Pink40 else Color.Transparent, CircleShape),
 		contentAlignment = Alignment.Center
 	) {
 		Box(

@@ -45,6 +45,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Blue
 import androidx.compose.ui.graphics.Color.Companion.Green
+import androidx.compose.ui.graphics.Color.Companion.LightGray
 import androidx.compose.ui.graphics.Color.Companion.Yellow
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
@@ -70,6 +71,8 @@ import com.ashutosh.bingo.screens.HomeScreen.Components.NavigationDrawerComponen
 import com.ashutosh.bingo.screens.HomeScreen.Components.SortTaskDialogComponent
 import com.ashutosh.bingo.screens.HomeScreen.Components.TaskComponent
 import com.ashutosh.bingo.ui.theme.BingoTheme
+import com.ashutosh.bingo.ui.theme.LightGreen
+import com.ashutosh.bingo.ui.theme.Pink40
 import com.ashutosh.bingo.util.Constants
 import com.ashutosh.bingo.util.DummyTasks
 import com.ashutosh.bingo.util.getFreeTime
@@ -114,8 +117,9 @@ fun HomeScreen(
 
 	// animation
 	val translateX = 600f
-	val leftTranslate = remember { Animatable(-translateX) }
-	val rightTranslate = remember { Animatable(translateX) }
+	val translateY = 600f
+	val leftTranslate = remember { Animatable(-translateX,-translateY) }
+	val rightTranslate = remember { Animatable(translateX,-translateY) }
 
 	LaunchedEffect(key1 = Unit) {
 		launch {
@@ -214,7 +218,7 @@ fun HomeScreen(
 					onClick = {
 						onAddTask()
 					},
-					containerColor = Blue,
+					containerColor = LightGreen,
 					contentColor = MaterialTheme.colorScheme.secondary
 				) {
 					Icon(
@@ -251,7 +255,7 @@ fun HomeScreen(
 						title = "Completed",
 						desc = "$totalCompletedTasks/$totalTasks Tasks",
 						icon = R.drawable.ic_task_list,
-						backgroundColor = Green,//light green
+						backgroundColor = Color(0xFFBFBAD9),//light green
 						modifier = Modifier
 							.weight(1f)
 							.graphicsLayer {
@@ -264,7 +268,7 @@ fun HomeScreen(
 						title = "Free Time",
 						desc = freeTimeText,
 						icon = R.drawable.ic_clock,
-						backgroundColor = Blue,
+						backgroundColor = Color(0xFF96DFCE),
 						modifier = Modifier
 							.weight(1f)
 							.graphicsLayer {
