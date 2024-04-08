@@ -56,3 +56,9 @@ val pieChartColors = listOf(
     Color(0xFFFF6348),
     Color(0xFFDCDDDF),
 )
+
+
+val DarkColor1 =   Color(0xFF16161D)
+val DarkColor2 =   Color(0xFF003366)
+val DarkColor3 =   Color(0xFF36454F)
+val DarkColor4 =   Color(0xFF002147)

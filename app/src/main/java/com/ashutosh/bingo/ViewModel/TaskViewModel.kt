@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.work.Data
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
+import com.ashutosh.bingo.CommonScreens.AppTheme
 import com.ashutosh.bingo.CommonScreens.NavDrawerItem
 import com.ashutosh.bingo.Main.MainEvent
 import com.ashutosh.bingo.R
@@ -330,9 +331,6 @@ data class MainState(
     val sleepTime: LocalTime = LocalTime.MAX ,
 )
 
-enum class AppTheme {
-    Light, Dark, Amoled;
-}
 
 enum class SortTask(val stringId: Int) {
     BY_PRIORITY_ASCENDING(R.string.priority_low_to_high),
