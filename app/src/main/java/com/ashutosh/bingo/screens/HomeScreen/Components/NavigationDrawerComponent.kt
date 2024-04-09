@@ -42,6 +42,7 @@ import com.ashutosh.bingo.CommonScreens.AppTheme
 import com.ashutosh.bingo.Components.fontRobotoMono
 import com.ashutosh.bingo.Components.h2TextStyle
 import com.ashutosh.bingo.Components.h3TextStyle
+import com.ashutosh.bingo.Components.taskDescTextStyle
 import com.ashutosh.bingo.Components.taskTextStyle
 import com.ashutosh.bingo.Main.MainEvent
 import com.ashutosh.bingo.R
@@ -105,7 +106,7 @@ fun NavigationDrawerComponent(
 			horizontalArrangement = Arrangement.spacedBy(16.dp)
 		) {
 			Text(
-				text = "App theme",
+				text = "Theme",
 				style = h3TextStyle,
 				color = MaterialTheme.colorScheme.onPrimary
 			)
@@ -168,17 +169,17 @@ fun NavDrawerItemUI(icon: ImageVector, label: String, onClick: () -> Unit) {
 		modifier = Modifier
 			.fillMaxWidth()
 			.clickable { onClick() }
-			.padding(32.dp , 8.dp),
-		horizontalArrangement = Arrangement.spacedBy(10.dp),
+			.padding(20.dp , 8.dp),
+		horizontalArrangement = Arrangement.spacedBy(5.dp),
 		verticalAlignment = Alignment.CenterVertically
 	) {
 		Icon(
-			modifier = Modifier.size(32.dp),
+			modifier = Modifier.size(25.dp),
 			imageVector = icon,
 			contentDescription = null,
 			tint = MaterialTheme.colorScheme.onPrimary
 		)
-		Text(text = label, style = taskTextStyle, color = MaterialTheme.colorScheme.onPrimary)
+		Text(text = label, style = h3TextStyle, color = MaterialTheme.colorScheme.onPrimary)
 	}
 }
 

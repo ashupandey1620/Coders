@@ -117,9 +117,8 @@ fun HomeScreen(
 
 	// animation
 	val translateX = 600f
-	val translateY = 600f
-	val leftTranslate = remember { Animatable(-translateX,-translateY) }
-	val rightTranslate = remember { Animatable(translateX,-translateY) }
+	val leftTranslate = remember { Animatable(-translateX) }
+	val rightTranslate = remember { Animatable(translateX) }
 
 	LaunchedEffect(key1 = Unit) {
 		launch {

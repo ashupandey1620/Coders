@@ -86,5 +86,6 @@ fun ThemeOptionItem(
 fun ThemeOptionComponentPreview() {
 	BingoTheme {
 		ThemeOptionComponent(defaultTheme = AppTheme.Light, onSelect = {})
+		//from 
 	}
 }

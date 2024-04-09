@@ -10,7 +10,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -79,7 +81,9 @@ fun FreeTimeScreen(
 		)
 	}) { innerPadding ->
 
-		Column(modifier = Modifier.padding(innerPadding)) {
+		Column(modifier = Modifier
+			.padding(innerPadding)
+			) {
 
 			val pieChartBgGradient = Brush.verticalGradient(
 				listOf(
@@ -91,8 +95,8 @@ fun FreeTimeScreen(
 				modifier = Modifier
 					.fillMaxWidth()
 					.background(
-						pieChartBgGradient,
-						RoundedCornerShape(bottomStart = 32.dp, bottomEnd = 32.dp)
+						pieChartBgGradient ,
+						RoundedCornerShape(bottomStart = 32.dp , bottomEnd = 32.dp)
 					)
 					.padding(bottom = 24.dp),
 				contentAlignment = Alignment.Center
