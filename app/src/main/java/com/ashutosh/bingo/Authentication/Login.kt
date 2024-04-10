@@ -1,5 +1,6 @@
 package com.ashutosh.bingo.Authentication
 
+import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -57,7 +58,10 @@ import com.ashutosh.bingo.R
 import com.ashutosh.bingo.ui.theme.BingoTheme
 
 @Composable
-fun Login() {
+fun Login(onBack: () -> Unit,
+          onClickLogin: () -> Unit,
+          onClickRegister: () -> Unit,
+          onClickForgotPassword: () -> Unit) {
 
     val context = LocalContext.current.applicationContext
 
@@ -120,7 +124,7 @@ fun Login() {
                     color = Color(0xFFCC9913) ,
                     fontSize = 12.sp ,
                     modifier = Modifier.clickable {
-//                            Toast.makeText(context,"Temporary Blocked",Toast.LENGTH_LONG).show()
+                            Toast.makeText(context,"Not Working Now",Toast.LENGTH_LONG).show()
 
                     })
             }
@@ -137,6 +141,7 @@ fun Login() {
                     enabled = (true) ,
                     onClick = {
 
+                              onClickLogin()
 //                        signInScreenViewModel.loadingState = true
 //
 //                        val loginPost = LoginRequest(
@@ -219,7 +224,7 @@ fun Login() {
                         modifier = Modifier
                             .padding(start = 5.dp)
                             .clickable {
-
+                                onClickRegister()
                             })
                 }
             }
@@ -446,6 +451,6 @@ fun numberTextField(icon: ImageVector , plText: String , prefixText : String): S
 @Composable
 fun LoginPreview() {
     BingoTheme {
-        Login()
+        Login({},{},{},{})
     }
 }

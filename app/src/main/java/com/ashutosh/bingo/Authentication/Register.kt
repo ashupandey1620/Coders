@@ -38,7 +38,9 @@ import com.ashutosh.bingo.ui.theme.BingoTheme
 
 
 @Composable
-fun Register() {
+fun Register(onBack: () -> Unit,
+             onClickRegister: () -> Unit,
+             onClickLogin: () -> Unit) {
 
     Column(
         modifier = Modifier
@@ -103,8 +105,7 @@ fun Register() {
                 Button(enabled = true
                     ,
                     onClick = {
-
-
+                              onClickRegister()
                     } ,
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFCC9913) ,
                         disabledContainerColor = Color.DarkGray) ,
@@ -142,7 +143,7 @@ fun Register() {
                         modifier = Modifier
                             .padding(start = 5.dp)
                             .clickable {
-
+                                onClickLogin()
                             })
                 }
             }
@@ -159,6 +160,6 @@ fun Register() {
 @Composable
 fun RegisterPreview() {
     BingoTheme {
-        Register()
+        Register({},{},{})
     }
 }

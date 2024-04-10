@@ -10,6 +10,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.ashutosh.bingo.Authentication.Login
+import com.ashutosh.bingo.Authentication.Register
 import com.ashutosh.bingo.ViewModel.TaskViewModel
 import com.ashutosh.bingo.screens.Add_Edit_Screen.AddTaskScreen
 import com.ashutosh.bingo.screens.Add_Edit_Screen.EditTaskScreen
@@ -38,7 +40,7 @@ fun AppNavigation(taskViewModel: TaskViewModel) {
 
     NavHost(
         navController = navController,
-        startDestination = Routes.HomeScreen.name
+        startDestination = Routes.LoginScreen.name
     ) {
         composable(route = Routes.HomeScreen.name) {
             HomeScreen(
@@ -168,6 +170,51 @@ fun AppNavigation(taskViewModel: TaskViewModel) {
                     })
             }
         }
+
+        composable(route = Routes.LoginScreen.name) {
+            Login(
+                onBack = {
+                    if (navController.isValidBackStack) {
+                        navController.popBackStack()
+                    }
+                },
+                onClickLogin = {
+                    if (navController.isValidBackStack) {
+                        navController.popBackStack()
+                        navController.navigate(route = Routes.HomeScreen.name)
+                    }
+                },
+                onClickRegister = {
+                    if (navController.isValidBackStack) {
+                        navController.popBackStack()
+                        navController.navigate(route = Routes.RegisterScreen.name)
+                    }
+                },
+                onClickForgotPassword = {
+
+                },
+                )
+
+        }
+
+
+        composable(route = Routes.RegisterScreen.name) {
+            Register(
+                onBack = {
+                    if (navController.isValidBackStack) {
+                        navController.popBackStack()
+                    }
+                },
+                onClickRegister = {
+                    navController.popBackStack()
+                    navController.navigate(route = Routes.HomeScreen.name)
+                },
+                onClickLogin = {
+                    navController.popBackStack()
+                    navController.navigate(route = Routes.LoginScreen.name)
+                },
+                )
+        }
     }
 }
 
@@ -186,4 +233,6 @@ enum class Routes {
     ThisWeekTaskScreen,
     CalenderScreen,
     SettingsScreen,
+    LoginScreen,
+    RegisterScreen
 }
