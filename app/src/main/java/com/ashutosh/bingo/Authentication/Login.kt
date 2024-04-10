@@ -271,9 +271,9 @@ fun TextField(icon: ImageVector , plText: String , prefixText : String): String 
         colors = OutlinedTextFieldDefaults.colors(
             focusedTextColor = Color.White ,
             unfocusedTextColor = Color.White,
-            focusedContainerColor = containerColor ,
-            unfocusedContainerColor = containerColor ,
-            disabledContainerColor = containerColor ,
+            focusedContainerColor = Color(0xFF161A30) ,
+            unfocusedContainerColor = Color(0xFF161A30) ,
+            disabledContainerColor = Color(0xFF161A30) ,
             focusedBorderColor = Color(0xFF555555) ,
             unfocusedBorderColor = Color(0xFF555555) ,
         ) ,
