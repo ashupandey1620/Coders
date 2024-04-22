@@ -197,7 +197,6 @@ fun AppNavigation(taskViewModel: TaskViewModel) {
 
         }
 
-
         composable(route = Routes.RegisterScreen.name) {
             Register(
                 onBack = {
